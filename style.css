@@ -1,0 +1,373 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(img/bg1.jpg);
+    background-size: cover;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 100%;
+    margin: 0px;
+}
+
+header{
+    background-color: rgba(122, 25, 54, 0.5);
+    color: white;
+    padding: 20px;
+}
+
+.title {
+    padding-left: 20%;
+}
+
+.content {
+    background-color: rgba(223, 219, 219, 0.5);
+    padding: 30px;
+    width: 100%;
+}
+
+.container {
+    border-radius: 10px;
+    background-color: rgba(223, 219, 219, 0.5);
+    padding: 20px;
+    margin-top: 10px;
+    padding-bottom: 25px    ;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid rgb(59, 5, 43);
+    height: 5px;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: rgb(59, 5, 43);
+    color: white;
+}
+
+.head th {
+    background-color: rgb(199, 45, 91);
+    color: white;
+}
+
+footer {
+    background-color: dimgray;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+button[type=reset] {
+    background-color:rgb(141, 0, 0);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    margin-top: 5px;
+}
+
+button[type=submit] {
+    background-color: rgb(119, 21, 86);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    margin-top: 5px;
+}
+
+button[type=ubah] {
+    background-color: rgb(119, 21, 86);
+    color: white;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    margin-right: 6px;
+}
+
+button[type=hapus] {
+    background-color: rgb(124, 0, 0);
+    color: white;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+button[type=submit]:hover {
+    background-color: rgb(59, 5, 43);
+}  
+
+button[type=reset]:hover {
+    background-color: rgb(61, 0, 0);
+}  
+
+button[type=hapus]:hover {
+    background-color: rgb(61, 0, 0);
+}  
+
+button[type=ubah]:hover {
+    background-color: rgb(59, 5, 43);
+}  
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*Responsive*/
+/* For mobile phones: */ 
+nav,article,aside{
+    width: 100%; 
+    float: left;
+}
+
+/* For tablets: (screen size bigger than 400px) */ 
+@media only screen and (min-width: 400px) {
+    nav 	{width: 100%;}
+    article	{width:  70%;}
+    aside 	{width:  30%;}
+    table   {width: 100%;}
+    content {width: 100%;}
+}
+
+/* For tablets: (screen size bigger than 600px) */ 
+@media only screen and (min-width: 600px) {
+    nav 	{width: 100%;}
+    article	{width:  70%;}
+    aside 	{width:  30%;}
+    .title {text-align: left;}
+}
+
+/* For desktop: (screen size bigger than 762px) */
+@media only screen and (min-width: 762px) {
+    nav 	{width: 25%;}
+    article	{width: 50%;}
+    aside	{width: 25%;}
+    
+    table {width: 100%;}
+}
+
+/* For desktop: (screen size bigger than 900px) */
+@media only screen and (min-width: 900px) {
+    nav 	{width: 25%;}
+    article	{width: 50%;}
+    aside	{width: 25%;}
+    table {width: 100%;}
+    .content {padding-left: 10%; padding-right: 10%;}
+}
+
+/* For desktop: (screen size bigger than 1024px) */
+@media only screen and (min-width: 1024px) {
+    nav 	{width: 25%;}
+    article	{width: 50%;}
+    aside	{width: 25%;}
+    table {width: 100%;}
+    .content {padding-left: 15%; padding-right: 15%;}
+    .title {padding-left: 15px;}
+}
+
+/* For desktop: (screen size bigger than 1280px) */
+@media only screen and (min-width: 1280px) {
+    nav 	{width: 25%;}
+    article	{width: 50%;}
+    aside	{width: 25%;}
+    table {width: 100%;}
+    .content {padding-left: 20%; padding-right: 20%;}
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .content {padding-left: 0px; padding-right: 0px;};
+    table {width: 90%};
+    .title {padding-left: 0px; text-align: center;}
+    .col-15, .col-85, button[type=submit], button[type=reset] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+/*Modal elements*/
+
+.allmodal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#simplemodal{
+    background-color:white ;
+    width: 300px;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+}
+
+.modal-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*padding: 2px 16px;*/
+}
+
+.modal-header{
+    background-color: rgb(134, 18, 57);
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+
+.closeBtn{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10px;
+    margin-top: 5px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.added.modal{
+    display: none;
+    background-color: white;
+    border: solid;
+    width: 100%;
+    bottom: 260px;
+    position: absolute;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+}
+
+.warning.modal{
+    display: none;
+    background-color: white;
+    border: solid;
+    width: 100%;
+    bottom: 260px;
+    position: absolute;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+}
+
+.delete.modal{
+    display: none;
+    background-color: white;
+    border: solid;
+    width: 100%;
+    bottom: 260px;
+    position: absolute;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+}
+
+.update.modal{
+    display: none;
+    background-color:white;
+    border: 1px solid;
+    width: 100%;
+    bottom: 260px;
+    position: absolute;
+    padding: 5px;
+}
+
+.ModalFormUpdated{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.432);
+    left: 0;
+    top: 0;
+    height: 125%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid;
+    display: none;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+}
+
+.ModalFormContent{
+    margin: 40vh auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    background-color: rgba(34, 33, 44, 0.808);
+    width: 400px;
+    height: 350px;  
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    border: 2px black;
+}
+
+.modalFormContent:input {
+    padding: 10px;
+}
+
+.ModalFormHeader{
+    display: flex;
+    justify-content: flex-end;
+    background-color: rgb(139, 13, 133);
+    padding: 2px 16px;
+    width: 400px;
+    height: 80px;
+}
+
+.ModalFormHeader span{
+    margin-right: 10px;
+    font-size: 25px;
+    transition: 0.9s;
+    cursor: pointer;
+}
+
+.ModalFormHeader span:hover{
+    transform: rotate(360deg);
+}
+
+.ModalFormContent {
+    background-color: black;
+}
+
+.modalFormSubmit {
+    background-color: black;
+    padding: 10px;
+}
+
+.modal-added {
+    background-color: rgb(119, 21, 86);
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+
+/* Add Animation */
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}

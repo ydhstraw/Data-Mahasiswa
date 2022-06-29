@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Data Mahasiswa</title>
+        <link href="style.css" type="text/css" rel="stylesheet">
+    </head>
+    <body onload = 'onloadDocuments()'>
+        <header>
+            <h1 class="title">Data mahasiswa</h1>
+        </header>
+        <div class="content">
+            <div class="container">
+                <div>
+                    <h2 style="text-align: left;">
+                        Hello There, welcome
+                        <span style="float: right;">
+                            
+                        </span>
+                    </h2>
+                </div>
+                <div>
+                    <a>Don't Stop Believin' - Journey</a>
+                </div>
+            </div>
+            <div class="container">
+                <div class="form">
+                    <form>
+                        <label class="col-15">NIM :</label>
+                        <input type="text" id="NIM" class="NIM col-85" name="NIM" placeholder="Nomor Induk Mahasiswa">
+                        <br>
+                        <label class="col-15">Nama :</label>
+                        <input type="text" id="Nama" class="Nama" name="Nama" placeholder="Nama Lengkap">
+                        <br>
+                        <label class="col-15">Alamat :</label>
+                        <input type="text" id="Alamat" class="Alamat col-85" name="Alamat" placeholder="Alamat Lengkap">
+                    </form>
+                    <div class="button">
+                        <p><button type="submit" class="submit">Submit</button></p>
+                        <p><button type="reset" class="reset">Reset</button></p><br><br><br><br>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 10%;">NIM</th>
+                            <th style="width: 35%;">Nama</th>
+                            <th style="width: 65%;">Alamat</th>
+                            <th colspan="2" style="width: 15%;">Pengaturan</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+            
+        </div>
+        <footer>
+            <div>
+                <p>Copyright 2020 ydhstraw</p>
+            </div>
+        </footer>    
+        <div class="allmodal">
+            <div id="simplemodal" class="added modal">
+                <div class="modal-content">
+                    <div class="modal-added">
+                        <span class="added closeBtn">&times;</span>
+                        <h2>Added!</h2>
+                    </div>
+                    <div class="modal-body">
+                        <p>Mahasiswa Baru Berhasil Ditambahkan</p>
+                    </div>
+                </div>
+            </div>
+            <div id="simplemodal" class="warning modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="warning closeBtn">&times;</span>
+                        <h2>Warning!</h2>
+                    </div>
+                    <div class="modal body">
+                        <p>Data Tidak Boleh Kosong.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="simplemodal" class="delete modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="deleted closeBtn">&times;</span>
+                        <h2>Deleted!</h2>
+                    </div>
+                    <div class="modal body">
+                        <p>Data Berhasil Dihapus.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="simplemodal" class="update modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="updated closeBtn">&times;</span>
+                        <h2>Updated!</h2>
+                    </div>
+                    <div class="modal body">
+                        <p>Data Berhasi Diupdate.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class = "ModalFormUpdated">
+            <div class="ModalFormContent">
+                <div class = "ModalFormHeader"><span class = "CloseUpdateButton">&times;</span></div>
+                <form class="modalFormContent">
+                    <label>NIM:</label>
+                    <input type = "text" id = 'NIMInput' class = "NIMInput" placeholder="Nomor Induk Mahasiswa">
+                    <br>
+                    <lable>Nama :</lable>
+                    <input type="text" id="NamaInput" class="NamaInput" name="NamaInput" placeholder="Nama Lengkap">
+                    <br>
+                    <label>Alamat :</label>
+                    <input type="text" id="AlamatInput" class="AlamatInput" name="AlamatInput" placeholder="Alamat">
+                </form>
+                <div class = "ModalFormSubmit">
+                    <button type="submit" class = "UpdateSubmit">Submit</button>
+                    <button type="reset" class = "ResetSubmit">Reset</button><br><br><br>
+                </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
